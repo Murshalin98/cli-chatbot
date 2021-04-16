@@ -1,6 +1,5 @@
 package com.chatbot.main;
 import java.util.Scanner;
-import java.util.Random;
 
 public class MainProgram {
     public static void main(String[] args) {
@@ -15,7 +14,7 @@ public class MainProgram {
                 "I'm Alexa! Your visual assistant.\n\n"+ userName +" : ");
 
         String firstResponse = input.nextLine();
-        if (firstResponse.startsWith("bye")) {
+        if (firstResponse.contains("bye")) {
             System.out.println("\nAlexa: Okay Bye " + userName + "!\nHave a nice day!");
             System.exit(0);
         }
@@ -31,7 +30,7 @@ public class MainProgram {
                     System.exit(0);
                 }
 
-                if (secondResponse.startsWith("bye")) {
+                if (secondResponse.contains("bye")) {
                     System.out.println("\nAlexa: Okay Bye " + userName + "!\nHave a nice day!");
                     System.exit(0);
                 }
