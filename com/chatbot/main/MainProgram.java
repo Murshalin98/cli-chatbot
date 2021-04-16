@@ -6,10 +6,10 @@ public class MainProgram {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        Random rand = new Random();
 
         System.out.print("Enter your name : ");
         String userName = input.nextLine();
+        userName = userName.equals("") ? "You" : userName;
 
         System.out.print("\nAlexa: Hey, "+ userName +" Welcome!\n" +
                 "I'm Alexa! Your visual assistant.\n\n"+ userName +" : ");
@@ -19,7 +19,7 @@ public class MainProgram {
             System.out.println("\nAlexa: Okay Bye " + userName + "!\nHave a nice day!");
             System.exit(0);
         }
-        AutoToken.botToken(firstResponse, rand.nextInt(15), userName);
+        AutoToken.botToken(firstResponse, userName);
 
         boolean firstReply = firstResponse.equals("") == false;
 
@@ -36,7 +36,7 @@ public class MainProgram {
                     System.exit(0);
                 }
 
-                AutoToken.botToken(secondResponse, rand.nextInt(15), userName);
+                AutoToken.botToken(secondResponse, userName);
             }
             else {
                 System.out.println("\nAlexa: No Response, Bye!");
