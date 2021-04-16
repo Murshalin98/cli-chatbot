@@ -9,11 +9,12 @@ public class MainProgram {
         System.out.print("Enter your name : ");
         String userName = input.nextLine();
 
-        System.out.print("\nBot: Hey, "+ userName +" Welcome! \n\nYou: ");
+        System.out.print("\nAlexa: Hey, "+ userName +" Welcome!\n" +
+                "I'm Alexa! Your visual assistant.\n\nYou: ");
 
         String firstResponse = input.nextLine();
         if (firstResponse.equals("bye")) {
-            System.out.println("\nBot: Okay Bye!");
+            System.out.println("\nAlexa: Okay Bye!");
             System.exit(0);
         }
         AutoToken.botToken(firstResponse, userName.length());
@@ -25,12 +26,12 @@ public class MainProgram {
             if (firstReply == true) {
                 String secondResponse = input.nextLine();
                 if (secondResponse.equals("") == true) {
-                    System.out.println("\nBot: No Response, Bye!");
+                    System.out.println("\nAlexa: No Response, Bye!");
                     System.exit(0);
                 }
 
                 if (secondResponse.equals("bye")) {
-                    System.out.println("\nBot: Okay Bye!");
+                    System.out.println("\nAlexa: Okay Bye!");
                     System.exit(0);
                 }
 
@@ -38,7 +39,7 @@ public class MainProgram {
                 AutoToken.botToken(secondResponse, i);
             }
             else {
-                System.out.println("\nBot: No Response, Bye!");
+                System.out.println("\nAlexa: No Response, Bye!");
             }
             i++;
         } while (firstReply == true);
