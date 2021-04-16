@@ -91,8 +91,15 @@ public class AutoToken {
             System.out.print("\nAlexa: thanks for understanding.\n");
             System.out.print("\n"+ userName +" : ");
         }
+        else if (match.contains("joke")) {
+            System.out.print("\nAlexa: ");
+            ReserveJoke.botJoke();
+            System.out.print("\n"+ userName +" : ");
+        }
         else {
-            System.out.print("\nAlexa: ask me anything!\n\n"+ userName +" : ");
+            System.out.print("\nAlexa: ");
+            ReserveQuestion.botQuestion(autoQus);
+            System.out.print("\n\n"+ userName +" : ");
         }
     }
 }
