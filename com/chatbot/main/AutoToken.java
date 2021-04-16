@@ -2,7 +2,6 @@ package com.chatbot.main;
 
 public class AutoToken {
     public static void botToken(String match, String userName) {
-
         userName = userName.equals("") ? "You" : userName;
 
         if (match.contains("fine")) {
@@ -28,7 +27,7 @@ public class AutoToken {
             System.out.print("\n"+ userName +" : ");
         }
         else if (match.contains("old")) {
-            System.out.print("\nAlexa: I'm a robot! :) 2 Days\n");
+            System.out.print("\nAlexa: I'm a robot!\nAge is not Matter :)\n");
             ReserveQuestion.botQuestion();
             System.out.print("\n"+ userName +" : ");
         }
@@ -100,6 +99,15 @@ public class AutoToken {
         else if (match.contains("joke")) {
             System.out.print("\nAlexa: ");
             ReserveJoke.botJoke();
+            System.out.print("\n"+ userName +" : ");
+        }
+        else if (match.contains("how")) {
+            System.out.print("\nAlexa: I'm doing good.\n");
+            ReserveQuestion.botQuestion();
+            System.out.print("\n"+ userName +" : ");
+        }
+        else if (match.contains("alexa")) {
+            System.out.print("\nAlexa: Yes, I'm Here.\n");
             System.out.print("\n"+ userName +" : ");
         }
         else {

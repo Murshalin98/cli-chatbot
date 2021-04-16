@@ -1,11 +1,10 @@
 package com.chatbot.main;
-
 import java.util.Random;
 
 public class ReserveQuestion {
     public static void botQuestion(){
 
-        String[] question = new String[15];
+        String[] question = new String[16];
 
         question[0] = "Do you like people?";
         question[1] = "Do you know a joke?";
@@ -22,9 +21,10 @@ public class ReserveQuestion {
         question[12] = "You’re intelligent.";
         question[13] = "Tell me about your personality.";
         question[14] = "How can I help you ?";
+        question[15] = "How old are you ?";
 
 
         Random rand = new Random();
-        System.out.println(question[rand.nextInt(15)]);
+        System.out.println(question[rand.nextInt(16)]);
     }
 }
