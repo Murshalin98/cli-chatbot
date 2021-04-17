@@ -141,13 +141,18 @@ public class AutoToken {
             if (questionPermission==1) { ReserveQuestion.botQuestion(); }
             System.out.print("\n"+ userName +": ");
         }
+        else if (match.contains("help")) {
+            System.out.print("\nAlexa: Yes! ask me.\n");
+            if (questionPermission==1) { ReserveQuestion.botQuestion(); }
+            System.out.print("\n"+ userName +": ");
+        }
         else {
             System.out.print("\nAlexa: ");
             if (questionPermission==1) {
                 ReserveQuestion.botQuestion();
             }
             else {
-                System.out.println("Ask me anything.");
+                System.out.println("Ask me properly.");
             }
             System.out.print("\n\n"+ userName +": ");
         }
