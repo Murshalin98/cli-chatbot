@@ -11,7 +11,7 @@ public class MainProgram {
         userName = userName.equals("") ? "You" : userName;
 
         System.out.print("\nAlexa: Hey, "+ userName +" Welcome!\n" +
-                "I'm Alexa! Your visual assistant.\n\n"+ userName +" : ");
+                "I'm Alexa! Your visual assistant.\n\n"+ userName +": ");
 
         String firstResponse = input.nextLine();
         if (firstResponse.contains("bye")) {

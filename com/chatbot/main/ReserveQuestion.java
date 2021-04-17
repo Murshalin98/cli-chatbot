@@ -4,7 +4,7 @@ import java.util.Random;
 public class ReserveQuestion {
     public static void botQuestion(){
 
-        String[] question = new String[16];
+        String[] question = new String[20];
 
         question[0] = "Do you like people?";
         question[1] = "Do you know a joke?";
@@ -22,9 +22,12 @@ public class ReserveQuestion {
         question[13] = "Tell me about your personality.";
         question[14] = "How can I help you ?";
         question[15] = "How old are you ?";
-
+        question[16] = "What is your job?";
+        question[17] = "How about you?";
+        question[18] = "What do you do?";
+        question[19] = "How is your new job?";
 
         Random rand = new Random();
-        System.out.println(question[rand.nextInt(16)]);
+        System.out.println(question[rand.nextInt(20)]);
     }
 }
